@@ -11,7 +11,7 @@ export const ProjectTitle = ({projectTitle}) => {
 export const StyledProjectTitle = styled.h2`
     font-weight: 700;
     text-align: center;
-    padding: 24px 0;
+    /* padding: 24px 0; */
     max-width: 80%;
     text-transform: capitalize;
 `
