@@ -20,4 +20,5 @@ export const StyledLink = styled.a`
     padding: 12px 16px;
     font-weight: 700;
     cursor: pointer;
+    
 `
