@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { devices } from "../screensizes";
 
-export const MainContainer = () => {
+export const Header = () => {
   return (
     <StyledHeader>
       <StyledUpperBox>
@@ -33,23 +34,29 @@ export const StyledHeader = styled.header`
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
-  padding: 16px;
   line-height: 1.5;
+  justify-content: space-between;
+
+  @media ${devices.laptop} {
+        height: 100vh;
+        width: 50vw;
+    }
 `;
 
 export const StyledUpperBox = styled.div`
   display: flex;
   justify-content: space-between;
+  padding: 16px;
+  font-size: clamp(12px, 2vw, 14px);
+  font-weight: 500;
 `;
 
 export const StyledLanguageList = styled.ul`
   list-style: none;
-  font-size: 12px;
 `;
 
 export const StyledContactList = styled.ul`
   list-style: none;
-  font-size: 12px;
 `
 
 export const StyledContactLink = styled.a`
@@ -65,7 +72,7 @@ export const StyledLowerBox = styled.h1`
   text-align: right;
   padding: 368px 16px 16px;
   width: 60%;
-  line-height: 1.2;
+  line-height: 1.4;
   color: #464f51;
   font-size: clamp(18px, 3vw, 48px);
 `;
