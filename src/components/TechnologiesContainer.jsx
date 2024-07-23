@@ -6,6 +6,7 @@ import { CssIcon } from "./CssIcon";
 import { Html5Icon } from "./Html5Icon";
 import { NodeJS } from "./NodeJS";
 import { StyledComponentsIcon } from "./StyledComponents";
+import { devices } from "../screensizes";
 
 export const TechnologiesContainer = () => {
   return (

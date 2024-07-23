@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { devices } from "../screensizes";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -14,10 +15,26 @@ export const Header = () => {
         </StyledLanguageList>
         <StyledContactList>
           <li>
-            <StyledContactLink href="">email</StyledContactLink>
+            <StyledContactLink
+              to="#"
+              onClick={(e) => {
+                window.location.href = "mailto:rkupcinskaite@gmail.com";
+                e.preventDefault();
+              }}
+            >
+              email
+            </StyledContactLink>
           </li>
           <li>
-            <StyledContactLink href="">github</StyledContactLink>
+            <StyledContactLink
+              to="#"
+              onClick={(e) => {
+                window.location.href = "https://github.com/raminta-kup";
+                e.preventDefault();
+              }}
+            >
+              github
+            </StyledContactLink>
           </li>
         </StyledContactList>
       </StyledUpperBox>
@@ -38,9 +55,9 @@ export const StyledHeader = styled.header`
   justify-content: space-between;
 
   @media ${devices.laptop} {
-        height: 100vh;
-        width: 50vw;
-    }
+    height: 100vh;
+    width: 50vw;
+  }
 `;
 
 export const StyledUpperBox = styled.div`
@@ -57,14 +74,14 @@ export const StyledLanguageList = styled.ul`
 
 export const StyledContactList = styled.ul`
   list-style: none;
-`
+`;
 
-export const StyledContactLink = styled.a`
-    color: #464f51;
-    text-decoration: none;
-    border-bottom: 1px solid #464f51;
-    cursor: pointer;
-`
+export const StyledContactLink = styled(Link)`
+  color: #464f51;
+  text-decoration: none;
+  border-bottom: 1px solid #464f51;
+  cursor: pointer;
+`;
 
 export const StyledLowerBox = styled.h1`
   font-weight: 700;

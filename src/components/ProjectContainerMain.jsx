@@ -36,12 +36,11 @@ export const StyledContainerMain = styled.main`
   @media ${devices.laptop} {
     width: 50vw;
     height: 100vh;
-    overflow-y: hidden;
+    overflow-y: scroll;
   }
 `;
 
 export const StyledContainerSection = styled.section`
-  box-sizing: border-box;
   min-height: 100vh;
   padding: 56px 24px;
   line-height: 1.2;
@@ -62,6 +61,9 @@ export const StyledButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
+  @media ${devices.laptop} {
+    flex-direction: row;
+  }
 `;
 
 export const StyledProjectDesc = styled.div`
@@ -71,4 +73,7 @@ export const StyledProjectDesc = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
+  @media ${devices.laptop} {
+  width: 70%;
+  }
 `;

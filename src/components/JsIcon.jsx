@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { devices } from "../screensizes"
 
 export const JsIcon = () => {
     return (
@@ -10,4 +11,7 @@ export const JsIcon = () => {
 export const StyledIcon = styled.svg`
     /* width: 16px; */
     height: 20px;
+    @media ${devices.laptop} {
+    height: 24px;
+  }
 `
